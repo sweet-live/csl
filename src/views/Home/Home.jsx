@@ -57,7 +57,7 @@ const config = {
   ],
 };
 const Home = () => {
-  const { ref, inView, entry } = useInView({ triggerOnce: true, delay: 1000 });
+  const { ref, inView, entry } = useInView({ triggerOnce: true, delay: 900 });
 
   return (
     <div id="home">
