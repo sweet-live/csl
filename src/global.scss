@@ -1,0 +1,25 @@
+@function responsiveWidth($base, $screen, $cap: 99999px) {
+  $res: calc(#{$base} / #{$screen} * 100vw);
+  @return Min($res, $cap);
+}
+@function responsiveHeight($base, $screen, $cap: 99999px) {
+  $res: calc(#{$base} / #{$screen} * 100vh);
+  @return Min($res, $cap);
+}
+
+@function minValue($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+.no-under {
+  text-decoration: none;
+}
+
+textarea,
+input {
+  outline: 0;
+}
+
+.hide-default {
+  display: none;
+}

@@ -1,0 +1,27 @@
+ <div className="about-container-text">
+                <div className="text">
+                  Our speciality however is Classic Cars. All our work is
+                  underpinned by the philosophy that every Classic car has its
+                  own charm, character and life and we keep this mind when
+                  carrying out any restoration work and ensure that the
+                  individual characteristics of each car are kept intact. Our
+                  skill and extensive experience is underpinned by a passion and
+                  love for classic car restoration. This passion means you can
+                  count on us to apply huge attention to every minor detail.
+                  Please take your time to look at our web-site where you can
+                  find information, pictures and video footage about every
+                  restoration stage.
+                </div>
+                <div className="text">
+                  You can count on us to check and double check during every
+                  stage of the restoration process to ensure that everything is
+                  in perfect working order. We are also equipped to hand make
+                  some parts which are impossible to source. We have every
+                  confidence that you will be happy with the quality of our work
+                  but to provide that extra peace of mind a warranty is provided
+                  after completion of works.
+                  <p>
+                    Our clients can follow the restoration process by receiving
+                    regular updates of work done daily, weekly or monthly.
+                  </p>
+                </div>

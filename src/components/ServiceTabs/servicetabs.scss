@@ -1,0 +1,56 @@
+.tabs {
+  transition: 0.5s;
+  padding-bottom: 20px;
+  .button-panel {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    .button {
+      cursor: pointer;
+      width: 200px;
+      margin: auto;
+      transition: 0.2s;
+      padding-bottom: 20px;
+      font-size: 20px;
+      text-align: center;
+      border-bottom: 1px solid transparent;
+    }
+    .button:hover {
+      opacity: 50%;
+      transition: 0.2s;
+    }
+    .active {
+      border-bottom: 1px solid black;
+    }
+  }
+}
+
+.panel {
+  height: 600px;
+  width: 1150px;
+  background-color: rgba(102, 102, 102, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &-content {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.5s;
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      width: 400px;
+      font-size: 20px;
+    }
+    img {
+      border: 15px solid honeydew;
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+    }
+  }
+}

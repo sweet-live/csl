@@ -1,0 +1,110 @@
+@import "../../global.scss";
+
+.contact-form__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e0e2db;
+  border-radius: 10px;
+  padding: 50px;
+  width: fit-content;
+  .form-root {
+  }
+  .form-field {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    margin-bottom: 15px;
+    .form-control {
+      border-radius: 5px;
+      border: 2px solid rgb(182, 182, 182);
+      background-color: white;
+      width: 450px;
+      resize: none;
+      padding: 10px 20px;
+      height: 40px;
+
+      &:focus {
+        border: 2px solid rgb(141, 113, 113);
+      }
+
+      &:focus ~ .form-placeholder,
+      &:not(:placeholder-shown) ~ .form-placeholder {
+        top: 0;
+        background-color: white;
+        opacity: 1;
+        padding: 0px 2px;
+      }
+
+      &.name {
+        resize: none;
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      &.email {
+        resize: none;
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      &.phone {
+        resize: none;
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      &.text {
+        height: 100%;
+        min-height: 40px;
+      }
+      &.error {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-color: rgb(138, 81, 81);
+      }
+    }
+    &-error {
+      padding: 2px 20px;
+      font-size: 12px;
+      background-color: rgb(138, 81, 81);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      color: white;
+    }
+
+    .form-placeholder {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      pointer-events: none;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden !important;
+      opacity: 0.5;
+      transform: translateY(-50%);
+      box-sizing: border-box;
+      max-width: 100%;
+      transition: 0.3s ease;
+    }
+  }
+
+  .btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #5d1203;
+    border: 2px solid transparent;
+    transition: 0.2s ease-out;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #440d02;
+      transition: 0.2s ease-in;
+    }
+  }
+}

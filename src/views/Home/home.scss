@@ -1,0 +1,210 @@
+@import "../../global.scss";
+
+#home {
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+  z-index: -1;
+}
+
+.background {
+  top: 550px;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  background-position: center;
+  position: absolute;
+  background-image: url("../../background.jpg");
+  z-index: -20;
+}
+
+.block-home {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  background-color: black;
+}
+
+.carousel-container {
+  opacity: 0.45;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 800px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.text-container {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  align-items: flex-start;
+  font-family: "Open Sans";
+  h1 {
+    font-weight: 1000;
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+  p {
+    font-weight: 200;
+    color: white;
+    margin-bottom: 15px;
+  }
+  a {
+    margin-top: 20px;
+    color: white;
+    transition: 0.2s;
+  }
+  a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.2s;
+  }
+  h2 {
+    font-weight: 200;
+    font-size: 15px;
+    color: #abacb4;
+  }
+}
+
+.block-about-us {
+  background-color: transparent;
+
+  &-container {
+    margin: auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    justify-content: center;
+
+    .title {
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 50px;
+      p {
+        font-weight: 400;
+        font-size: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px dashed white;
+      }
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+
+      &-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 550px;
+          text-align: center;
+          color: white;
+          font-weight: 100;
+
+          .learn-more-btn {
+            margin-top: 35px;
+            max-width: 150px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: 2px solid white;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+            &-text {
+              color: white !important;
+            }
+            img {
+              margin-left: 5px;
+              width: 5%;
+            }
+          }
+
+          .learn-more-btn:hover {
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-our-services {
+  color: #00272b;
+  background-color: #e0e2db;
+  opacity: 1; //#b8dbd9;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  &-content {
+    width: 1150px;
+    margin: auto;
+    .title {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 50px;
+      p {
+        font-weight: 400;
+        font-size: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px dashed black;
+      }
+    }
+  }
+}
+
+.block-contact-us {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #ffffff;
+  .title {
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    p {
+      font-weight: 400;
+      font-size: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px dashed black;
+    }
+  }
+  &-wrapper {
+    transform: translateY(200px);
+    transition: 0.1s;
+    opacity: 0;
+    &-in-view {
+      transform: translateY(0px);
+      opacity: 1;
+      transition: 0.5s;
+    }
+  }
+}
