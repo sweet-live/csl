@@ -3,7 +3,7 @@ import "./contactform.scss";
 import axios from "axios";
 import FormValidator from "../../utilities/form-validators";
 
-const API_PATH = "http://carsecondlife.co.uk/mailer/mail.php";
+const API_PATH = "https://carsecondlife.co.uk/mailer/mail.php";
 
 /**
  * @component ContactForm
