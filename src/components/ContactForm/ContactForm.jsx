@@ -3,19 +3,20 @@ import "./contactform.scss";
 import axios from "axios";
 import FormValidator from "../../utilities/form-validators";
 
-const API_PATH = "https://carsecondlife.co.uk/mailer/mail.php";
+const API_PATH = "http://carsecondlife.co.uk/mail.php";
+
+var completionValidators = {
+  name: false,
+  email: false,
+  phone: false,
+  msg: false,
+};
 
 /**
  * @component ContactForm
  * @props - { object } -  config
  */
 const ContactForm = (props, ref) => {
-  var completionValidators = {
-    name: false,
-    email: false,
-    phone: false,
-    msg: false,
-  };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -64,39 +65,51 @@ const ContactForm = (props, ref) => {
     switch (event.target.id) {
       case "name":
         if (event.target.value != "") {
+          completionValidators["name"] = true;
           toggleError(false, event.target);
           togglePlaceHolder(true, event.target);
         } else {
+          completionValidators["name"] = false;
           toggleError(true, event.target);
           togglePlaceHolder(false, event.target);
         }
+        console.log(completionValidators);
         break;
       case "email":
         if (formValidator.validateEmail(event.target.value)) {
+          completionValidators["email"] = true;
           toggleError(false, event.target);
           togglePlaceHolder(true, event.target);
         } else {
+          completionValidators["email"] = false;
           toggleError(true, event.target);
           togglePlaceHolder(false, event.target);
         }
+        console.log(completionValidators);
         break;
       case "phone":
         if (formValidator.validatePhone(event.target.value)) {
+          completionValidators["phone"] = true;
           toggleError(false, event.target);
           togglePlaceHolder(true, event.target);
         } else {
+          completionValidators["phone"] = false;
           toggleError(true, event.target);
           togglePlaceHolder(false, event.target);
         }
+        console.log(completionValidators);
         break;
       case "msg":
         if (event.target.value != "") {
+          completionValidators["msg"] = true;
           toggleError(false, event.target);
           togglePlaceHolder(true, event.target);
         } else {
+          completionValidators["msg"] = false;
           toggleError(true, event.target);
           togglePlaceHolder(false, event.target);
         }
+        console.log(completionValidators);
         break;
     }
   };
@@ -125,7 +138,9 @@ const ContactForm = (props, ref) => {
       console.log("YES SEND");
     } else {
       console.log("NO DONT");
+      return;
     }
+
     await axios
       .post(API_PATH, {
         name,
