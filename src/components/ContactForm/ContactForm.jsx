@@ -3,7 +3,7 @@ import "./contactform.scss";
 import axios from "axios";
 import FormValidator from "../../utilities/form-validators";
 
-const API_PATH = "http://carsecondlife.co.uk/mail2.php";
+const API_PATH = "http://carsecondlife.co.uk/mailer/mail.php";
 
 /**
  * @component ContactForm
@@ -65,34 +65,49 @@ const ContactForm = (props, ref) => {
       case "name":
         if (event.target.value != "") {
           toggleError(false, event.target);
+          togglePlaceHolder(true, event.target);
         } else {
           toggleError(true, event.target);
+          togglePlaceHolder(false, event.target);
         }
         break;
       case "email":
         if (formValidator.validateEmail(event.target.value)) {
           toggleError(false, event.target);
+          togglePlaceHolder(true, event.target);
         } else {
           toggleError(true, event.target);
+          togglePlaceHolder(false, event.target);
         }
         break;
       case "phone":
         if (formValidator.validatePhone(event.target.value)) {
           toggleError(false, event.target);
+          togglePlaceHolder(true, event.target);
         } else {
           toggleError(true, event.target);
+          togglePlaceHolder(false, event.target);
         }
         break;
       case "msg":
         if (event.target.value != "") {
           toggleError(false, event.target);
+          togglePlaceHolder(true, event.target);
         } else {
           toggleError(true, event.target);
+          togglePlaceHolder(false, event.target);
         }
         break;
     }
-    // event.target.classList.add("error");
-    // event.target.nextSibling.classList.remove("hide-default");
+  };
+
+  const togglePlaceHolder = (show, target) => {
+    console.log(target.nextSibling.nextSibling);
+    if (show) {
+      target.nextSibling.nextSibling.classList.add("unfocus");
+    } else {
+      target.nextSibling.nextSibling.classList.remove("unfocus");
+    }
   };
 
   const toggleError = (mode, target) => {
@@ -127,6 +142,7 @@ const ContactForm = (props, ref) => {
   const removeErrors = (event) => {
     event.target.classList.remove("error");
     event.target.nextSibling.classList.add("hide-default");
+    togglePlaceHolder(false, event.target);
   };
   return (
     <div className="contact-form__container">
@@ -147,7 +163,7 @@ const ContactForm = (props, ref) => {
             maxLength="30"
           ></textarea>
           <div className="form-field-error hide-default">
-            Please enter a viable email
+            Please enter a name
           </div>
           <label htmlFor="name" className="form-placeholder">
             Name
@@ -159,7 +175,6 @@ const ContactForm = (props, ref) => {
             id="email"
             type="email"
             className="form-control email"
-            aria-describedby="emailHelp"
             value={email}
             maxLength="30"
             onChange={(e) => onEmailChange(e)}
@@ -206,7 +221,7 @@ const ContactForm = (props, ref) => {
             onFocus={(e) => removeErrors(e)}
           ></textarea>
           <div className="form-field-error hide-default">
-            Please enter a viable email
+            Please enter a message
           </div>
           <label htmlFor="message" className="form-placeholder">
             Message

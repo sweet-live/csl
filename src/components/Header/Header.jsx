@@ -55,9 +55,9 @@ const Header = (props) => {
   };
 
   const handleScroll = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 200) {
       backgroundShow();
-    } else if (window.scrollY < 100) {
+    } else if (window.scrollY < 200) {
       backgroundHide();
     }
   };

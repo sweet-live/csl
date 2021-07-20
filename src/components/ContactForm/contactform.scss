@@ -15,7 +15,7 @@
     flex-direction: column;
     position: relative;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     .form-control {
       border-radius: 5px;
       border: 2px solid rgb(182, 182, 182);
@@ -27,12 +27,15 @@
 
       &:focus {
         border: 2px solid rgb(141, 113, 113);
+        transition: 0.3s ease;
       }
 
       &:focus ~ .form-placeholder,
       &:not(:placeholder-shown) ~ .form-placeholder {
-        top: 0;
+        top: -4px;
         background-color: white;
+        border: 2px solid rgb(141, 113, 113);
+        border-radius: 5px;
         opacity: 1;
         padding: 0px 2px;
       }
@@ -86,7 +89,12 @@
       transform: translateY(-50%);
       box-sizing: border-box;
       max-width: 100%;
+      border: 2px solid white;
       transition: 0.3s ease;
+      &.unfocus {
+        border: 2px solid rgb(182, 182, 182) !important;
+        transition: 0s !important;
+      }
     }
   }
 
