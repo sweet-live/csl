@@ -40,13 +40,19 @@
         object-fit: fill;
         margin-right: 5px;
       }
+      transition: 0.3s;
+    }
+    .Logo:hover {
+      cursor: pointer;
+      background-color: #420b00;
+      transition: 0.3s;
     }
   }
   .nav-items {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 400px;
+    width: 500px;
     height: 100%;
   }
 }
@@ -91,7 +97,13 @@
     max-width: 100%;
   }
 }
-.nav-link:hover {
+
+.nav-link-background:hover {
+  background-color: rgb(100, 100, 100) !important;
+  transition: 0.05s;
+}
+
+.nav-link:not(.show):hover {
   opacity: 0.5;
   transition: 0.05s;
 }

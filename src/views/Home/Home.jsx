@@ -1,63 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./home.scss";
 import HomeCarousel from "../../components/HomeCarousel/HomeCarousel";
 import ServiceTabs from "../../components/ServiceTabs/ServiceTabs";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import { useInView } from "react-intersection-observer";
-const config = {
-  api: `${process.env.REACT_APP_API}`,
-  title: "Contact Me",
-  description:
-    "Write us about your request, We'll get back to you within 24 hours.",
-  successMessage: "Thank you for contacting me.",
-  errorMessage: "Please fill the complete form",
-  fields: {
-    firstName: "",
-    lastName: "",
-    email: "",
-    msg: "",
-  },
-  fieldsConfig: [
-    {
-      id: 1,
-      label: "First Name",
-      fieldName: "firstName",
-      type: "text",
-      placeholder: "Your First Name",
-      isRequired: true,
-      klassName: "first-name-field",
-    },
-    {
-      id: 2,
-      label: "Last Name",
-      fieldName: "lastName",
-      type: "text",
-      placeholder: "Your Last Name",
-      isRequired: true,
-      klassName: "last-name-field",
-    },
-    {
-      id: 3,
-      label: "Email",
-      fieldName: "email",
-      type: "email",
-      placeholder: " Your Email",
-      isRequired: true,
-      klassName: "email-field",
-    },
-    {
-      id: 4,
-      label: "Message",
-      fieldName: "msg",
-      type: "textarea",
-      placeholder: "Write something.....",
-      isRequired: true,
-      klassName: "message-field",
-    },
-  ],
-};
+
 const Home = () => {
-  const { ref, inView, entry } = useInView({ triggerOnce: true, delay: 700 });
+  const { ref, inView, entry } = useInView({ triggerOnce: true, delay: 200 });
 
   return (
     <div id="home">
@@ -104,7 +53,7 @@ const Home = () => {
                 underpinned by the philosophy that every Classic car has its own
                 charm, character and life. Thus we keep this mind when carrying
                 out any restoration work and ensure that the individuality of
-                each car are kept intact.
+                each car is kept intact.
                 <a className="learn-more-btn" href="/about-us">
                   <div className="learn-more-btn-text">Learn More</div>
                   <img src="images/Arrow Right.svg" />
@@ -119,9 +68,7 @@ const Home = () => {
           <div className="title">
             <p>Our Services</p>
           </div>
-          <div className="tabs">
-            <ServiceTabs />
-          </div>
+          <ServiceTabs />
         </div>
       </div>
       <div className="block-contact-us">
