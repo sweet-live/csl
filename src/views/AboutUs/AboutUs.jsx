@@ -107,28 +107,22 @@ const AboutUs = () => {
       </InView>
 
       <div className="about-us-biography">
-        <InView threshold="0.1" triggerOnce="true">
+        <InView triggerOnce="true">
           {({ inView, ref, entry }) => (
-            <div className="about-us-biography-container">
-              <img
-                ref={ref}
-                className={`${inView ? "" : "hide-opacity"}`}
-                src="images/Roma.png"
-              />
+            <div
+              ref={ref}
+              className={`about-us-biography-container ${
+                inView ? "" : "hide-opacity"
+              }`}
+              style={{ transitionDelay: "0.8s" }}
+            >
+              <img src="images/Roma.png" />
 
               <div className="container">
-                <h3 ref={ref} className={`${inView ? "" : "hide-opacity"}`}>
-                  Who are we?
-                </h3>
-                <h1 ref={ref} className={`${inView ? "" : "hide-opacity"}`}>
-                  Road to classic cars...
-                </h1>
+                <h3>Who are we?</h3>
+                <h1>Road to classic cars...</h1>
                 <div className="columns">
-                  <p
-                    ref={ref}
-                    className={`${inView ? "" : "hide-opacity"}`}
-                    style={{ marginRight: "50px" }}
-                  >
+                  <p style={{ marginRight: "50px" }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -138,7 +132,7 @@ const AboutUs = () => {
                     occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
                   </p>
-                  <p ref={ref} className={`${inView ? "" : "hide-opacity"}`}>
+                  <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -207,7 +201,7 @@ const AboutUs = () => {
               )}
             </InView>
 
-            <InView triggerOnce="true" delay="500">
+            <InView triggerOnce="true">
               {({ inView, ref, entry }) => (
                 <div
                   ref={ref}
@@ -255,7 +249,7 @@ const AboutUs = () => {
               )}
             </InView>
 
-            <InView triggerOnce="true" delay="500">
+            <InView triggerOnce="true">
               {({ inView, ref, entry }) => (
                 <div
                   ref={ref}
