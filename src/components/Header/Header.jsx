@@ -3,7 +3,6 @@ import { useState } from "react";
 import { withRouter } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "./header.scss";
-import useInterval from "../../hooks/useInterval";
 import { Link } from "react-router-dom";
 const pages = [
   {
