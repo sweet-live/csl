@@ -107,26 +107,26 @@ const AboutUs = () => {
       </InView>
 
       <div className="about-us-biography">
-        <InView threshold="0.9" triggerOnce="true">
+        <InView threshold="0.1" triggerOnce="true">
           {({ inView, ref, entry }) => (
             <div className="about-us-biography-container">
               <img
                 ref={ref}
-                className={`${inView ? "" : "hide-opacity-position-x--200"}`}
+                className={`${inView ? "" : "hide-opacity"}`}
                 src="images/Roma.png"
               />
 
               <div className="container">
                 <h3
                   ref={ref}
-                  className={`${inView ? "" : "hide-opacity-position-x"}`}
+                  className={`${inView ? "" : "hide-opacity"}`}
                   style={{ transitionDelay: "0.3s" }}
                 >
                   Who are we?
                 </h3>
                 <h1
                   ref={ref}
-                  className={`${inView ? "" : "hide-opacity-position-x"}`}
+                  className={`${inView ? "" : "hide-opacity"}`}
                   style={{ transitionDelay: "0.5s" }}
                 >
                   Road to classic cars...
