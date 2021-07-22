@@ -117,25 +117,17 @@ const AboutUs = () => {
               />
 
               <div className="container">
-                <h3
-                  ref={ref}
-                  className={`${inView ? "" : "hide-opacity"}`}
-                  style={{ transitionDelay: "0.3s" }}
-                >
+                <h3 ref={ref} className={`${inView ? "" : "hide-opacity"}`}>
                   Who are we?
                 </h3>
-                <h1
-                  ref={ref}
-                  className={`${inView ? "" : "hide-opacity"}`}
-                  style={{ transitionDelay: "0.5s" }}
-                >
+                <h1 ref={ref} className={`${inView ? "" : "hide-opacity"}`}>
                   Road to classic cars...
                 </h1>
                 <div className="columns">
                   <p
                     ref={ref}
                     className={`${inView ? "" : "hide-opacity"}`}
-                    style={{ marginRight: "50px", transitionDelay: "0.7s" }}
+                    style={{ marginRight: "50px" }}
                   >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -146,11 +138,7 @@ const AboutUs = () => {
                     occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
                   </p>
-                  <p
-                    ref={ref}
-                    className={`${inView ? "" : "hide-opacity"}`}
-                    style={{ transitionDelay: "0.8s" }}
-                  >
+                  <p ref={ref} className={`${inView ? "" : "hide-opacity"}`}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
